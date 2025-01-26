@@ -26,6 +26,7 @@ body {
     "main"
     "footer";
     background-color: #d3effc;
+    font-family: "Andika", serif;
 }
 
 header {
@@ -92,7 +93,10 @@ main ul {
     list-style-type: none;
 }
 
-
+h1 {
+    font-family: "Updock", serif;
+    font-size: 3rem;
+}
 
 h2 {
     text-align: center;
@@ -132,15 +136,13 @@ footer nav ul li {
     header {
         text-align: center;
         grid-template-columns: 1fr;
-        width: 100%;
-        height: 100%;
         background-color: white;
+        margin: 1rem;
     }
     
     nav ul {
-        display: grid;
-        justify-content: center;
-        gap: 0.5rem;
+        display: flex;
+        flex-direction: column;
     }
 
     nav ul li {
@@ -155,10 +157,12 @@ footer nav ul li {
     figure {
         display: flex;
         flex-direction: column;
-        width: 50%;
+        width: 100%;
+        height: auto;
         text-align: center;
-        justify-content: center;
+        justify-items: center;
     }
+    
 
     footer nav ul {
         display: flex;
