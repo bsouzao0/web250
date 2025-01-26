@@ -21,10 +21,6 @@ body {
     height: 100vh;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 2fr 1fr;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer";
     background-color: #d3effc;
     font-family: "Andika", serif;
 }
@@ -74,7 +70,6 @@ nav ul li a {
 
 main {
     margin: 1rem;
-    grid-area: main;
     justify-items: center;
     align-items: center;
     background-color: white;
@@ -114,8 +109,6 @@ figcaption {
  }
 
 footer {
-
-    grid-area: footer;
     text-align: center;
     align-items: center;
     justify-self: center;
