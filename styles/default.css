@@ -25,7 +25,7 @@ body {
     "header"
     "main"
     "footer";
-    background-color: #dbe4e7;
+    background-color: #d3effc;
 }
 
 header {
@@ -69,12 +69,18 @@ nav ul li a {
     font-size: larger;
 }
 
+
+
 main {
     margin: 1rem;
     grid-area: main;
     justify-items: center;
     align-items: center;
     background-color: white;
+}
+main a {
+    text-decoration: none;
+    color: #cfbaf0;
 }
 
 main p {
@@ -85,6 +91,7 @@ main ul {
     padding: 1rem;
     list-style-type: none;
 }
+
 
 
 h2 {
