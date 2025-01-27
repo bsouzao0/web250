@@ -66,12 +66,11 @@ nav ul li a {
     font-size: larger;
 }
 
-
-
 main {
     margin: 1rem;
     align-items: center;
     background-color: white;
+    text-align: left;
 }
 main a {
     text-decoration: none;
@@ -80,7 +79,6 @@ main a {
 
 main p {
     padding: 0 0.5rem;
-    text-align: left;
 }
 
 main ul {
