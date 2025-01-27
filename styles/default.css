@@ -81,6 +81,7 @@ main a {
 
 main p {
     padding: 0 0.5rem;
+    text-align: left;
 }
 
 main ul {
