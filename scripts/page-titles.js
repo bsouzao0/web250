@@ -1,5 +1,5 @@
 var pageConfig = {
-    titlePrefix: "Brenda Oliveira's Blue Orchid &laquo; WEB250 &raquo; ",
+    titlePrefix: "Brenda Oliveira's Blue Orchid « WEB250 » ",
     pageTitles: {
         home: "Home",
         about: "Introduction",
