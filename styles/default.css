@@ -61,7 +61,9 @@ main {
     display: grid;
     background-color: white;
     text-align: left;
+    display: grid;
 }
+
 main a {
     text-decoration: none;
     color: #b33473;
@@ -99,10 +101,11 @@ figcaption {
  }
 
 footer {
+    display: grid;
     text-align: center;
     align-items: center;
-    justify-self: center;
-    width: 100%;
+    justify-content: center;
+    margin: 0.5rem;
 }
 
 footer nav ul {
