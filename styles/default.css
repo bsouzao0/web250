@@ -13,7 +13,6 @@ body {
     justify-items: center;
     background-color: #d3effc;
     font-family: "Andika", serif;
-    margin: 0 1rem;
 }
 
 header {
@@ -22,12 +21,12 @@ header {
     color: #5679a7;
     align-items: center;
     text-align: center;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 1rem;
     width: 100%;
 }   
 header nav {
-    width: 50%;
+    width: 40%;
 }
 
 nav {
@@ -81,6 +80,7 @@ h1 {
     font-family: "Updock", serif;
     font-size: 3.5rem;
     font-weight: 600;
+    width: 30%;
 }
 
 h2 {
