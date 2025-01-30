@@ -1,17 +1,5 @@
 @charset "utf-8";
 
-/* ---- Colors-----
-#FBF8CC
-#FDE4CF
-#FFCFD2
-#F1C0E8
-#CFBAF0
-#A3C4F3
-#90DBF4
-#8EECF5
-#98F5E1
-#B9FBC0
-*/
 html {
     margin: 0;
     padding: 0;
@@ -20,32 +8,34 @@ body {
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
     background-color: #d3effc;
     font-family: "Andika", serif;
+    margin: 0 1rem;
 }
 
 header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    display: flex;
     background-color: white;
     color: #5679a7;
     align-items: center;
     text-align: center;
-    padding: 1rem auto;
-    margin-top: 1rem;
-    font-weight: 800;
+    justify-content: space-between;
+    margin: 1rem;
+    width: 100%;
 }   
+header nav {
+    width: 50%;
+}
 
 nav {
-    align-items: center;
-    text-align: center;
     background-color: #b33473;
     margin: 0;
     padding: 0;
-    align-items: center;
     font-weight: 800;
+    width: 100%;
 }
 
 nav ul {
@@ -69,7 +59,7 @@ nav ul li a {
 }
 
 main {
-    margin: 1rem;
+    display: grid;
     background-color: white;
     text-align: left;
 }
@@ -112,6 +102,7 @@ footer {
     text-align: center;
     align-items: center;
     justify-self: center;
+    width: 100%;
 }
 
 footer nav ul {
@@ -156,7 +147,9 @@ footer nav ul li {
         justify-items: center;
     }
     
-
+    footer {
+        width: 100%;
+    }
     footer nav ul {
         display: flex;
         flex-direction: column;
