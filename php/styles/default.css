@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+html {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    background-color: #d3effc;
+    font-family: "Andika", serif;
+}
+
+header {
+    display: flex;
+    background-color: white;
+    color: #5679a7;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    margin: 1rem;
+    width: 100%;
+}   
+header nav {
+    width: 40%;
+}
+
+nav {
+    background-color: #b33473;
+    margin: 0;
+    padding: 0;
+    font-weight: 800;
+    width: 100%;
+}
+
+nav ul {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+nav ul li {
+    list-style-type: none;
+    padding: 0.1rem;
+    box-sizing: border-box;
+    border-bottom: white 0.2px solid;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    list-style-type: none;
+    color: #ffffff;
+    font-size: larger;
+}
+
+main {
+    display: grid;
+    background-color: white;
+    text-align: left;
+    display: grid;
+}
+
+main a {
+    text-decoration: none;
+    color: #b33473;
+}
+
+main p {
+    padding: 0 0.5rem;
+}
+
+main ul {
+    padding: 1rem;
+    list-style-type: none;
+}
+
+h1 {
+    font-family: "Updock", serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    width: 30%;
+}
+
+h2 {
+    text-align: center;
+    color: #5679a7;
+    font-weight: 800;
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+	font-style: italic;
+	padding: 0.1rem;
+ }
+
+footer {
+    display: grid;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+}
+
+footer nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+footer nav ul li {
+    padding: 1rem;
+}
+
+
+@media only screen and (max-width: 550px) {
+
+    header {
+        text-align: center;
+        grid-template-columns: 1fr;
+        background-color: white;
+        margin: 1rem;
+    }
+    
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        list-style-type: none;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        list-style-type: none;
+    }
+    
+    figure {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: auto;
+        text-align: center;
+        justify-items: center;
+    }
+    
+    footer {
+        width: 100%;
+    }
+    footer nav ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+}
