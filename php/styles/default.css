@@ -59,7 +59,7 @@ nav ul li a {
 /* Dropdown */
 .dropdown {
     position: relative;
-    display: inline-block;
+    display: block;
 }
  
 .dropbtn {
@@ -69,28 +69,24 @@ nav ul li a {
 
 .dropdown-content {
 display: none; 
-position: absolute;
+position: relative;
 background-color: white;
 min-width: 160px;
 z-index: 1;
 }
 
 .dropdown-content a {
-color: #0f216c;
+color: #b33473;
 text-decoration: none;
 display: block;
 }
 
 .dropdown-content a:hover {
-background-color: #f6efea; 
+background-color: #d3effc; 
 }
 
 .dropdown:hover .dropdown-content {
 display: block; 
-}
-
-.dropdown:hover .dropbtn {
-background-color: #f6efea;
 }
  
 main {
