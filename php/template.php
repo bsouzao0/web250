@@ -3,10 +3,12 @@
     <head>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="scripts/page-titles.js"></script>
-        <script src="scripts/page-components.js" defer></script>
         <title>Brenda Oliveira's Blue Orchid</title>
     </head>
 <body data-title="template">
+    <header>
+        <?php include 'components/header.html' ?>
+    </header>
 
     <main>
         <h2>Template Page - CHANGE TO PAGE NAME</h2>
@@ -18,6 +20,7 @@
         </p>
     </main>
 </body>
+
 
 </html>
 

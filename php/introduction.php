@@ -3,11 +3,13 @@
     <head>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="scripts/page-titles.js"></script>
-        <script src="scripts/page-components.js" defer></script>
         <title>Brenda Oliveira's Blue Orchid</title>
     </head>
 <body data-title="about">
 
+    <header>  
+        <?php include 'components/header.html' ?>
+    </header> 
 
     <main>
         <h2>Introduction</h2>
@@ -41,6 +43,10 @@
             <li><b>Funny/Interesting Item to Remember me by:</b> I like to read Mangas and watch Animes.</li>
         </ul>
     </main>
+
+    <footer>
+        <?php include 'components/footer.html' ?>
+    </footer>
 
 </body>
 

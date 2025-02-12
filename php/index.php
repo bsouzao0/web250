@@ -3,10 +3,12 @@
     <head>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="scripts/page-titles.js"></script>
-        <script src="scripts/page-components.js" defer></script>
         <title>Brenda Oliveira's Blue Orchid</title>
     </head>
 <body data-title="home">
+    <header>  
+        <?php include 'components/header.html' ?>
+    </header>   
 
     <main>
         <h2>Home</h2>
@@ -17,6 +19,10 @@
         <p>You can learn more reading my <a href="introduction.html">Introduction</a>!
         Feel free to explore and see what I've been working on!</p>
     </main>
+
+    <footer>
+        <?php include 'components/footer.html' ?>
+    </footer>
 
 </body>
 

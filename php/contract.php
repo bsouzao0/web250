@@ -3,10 +3,12 @@
     <head>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="scripts/page-titles.js"></script>
-        <script src="scripts/page-components.js" defer></script>
         <title>Brenda Oliveira's Blue Orchid</title>
     </head>
 <body data-title="contract">
+    <header>
+        <?php include 'components/header.html' ?>
+    </header>
 
     <main>
         <h2>Contract</h2>
@@ -26,6 +28,10 @@
             
         <p><i>Signed: Brenda S. Oliveira, 01/19/2025</i></p>
     </main>
+
+    <footer>
+        <?php include 'components/footer.html' ?>
+    </footer>
 
 </body>
 
