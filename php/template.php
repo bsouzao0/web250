@@ -4,6 +4,7 @@
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="scripts/page-titles.js"></script>
         <title>Brenda Oliveira's Blue Orchid</title>
+        <?php include 'components/head.html' ?>
     </head>
 <body data-title="template">
     <header>
@@ -19,6 +20,10 @@
         I will change it or delete it depending on the assignment I create form it.
         </p>
     </main>
+
+    <footer>
+        <?php include 'components/footer.html' ?>
+    </footer>
 </body>
 
 
