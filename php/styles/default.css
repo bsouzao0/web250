@@ -56,7 +56,43 @@ nav ul li a {
     color: #ffffff;
     font-size: larger;
 }
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+ 
+.dropbtn {
+    border: none;
+    cursor: pointer;
+}
 
+.dropdown-content {
+display: none; 
+position: absolute;
+background-color: white;
+min-width: 160px;
+z-index: 1;
+}
+
+.dropdown-content a {
+color: #0f216c;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content a:hover {
+background-color: #f6efea; 
+}
+
+.dropdown:hover .dropdown-content {
+display: block; 
+}
+
+.dropdown:hover .dropbtn {
+background-color: #f6efea;
+}
+ 
 main {
     display: grid;
     background-color: white;
