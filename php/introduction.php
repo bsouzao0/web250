@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <script src="scripts/page-titles.js"></script>
         <title>Brenda Oliveira's Blue Orchid</title>
         <?php include 'components/head.html' ?>
     </head>
