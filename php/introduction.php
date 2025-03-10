@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Brenda Oliveira's Blue Orchid</title>
-        <?php include 'components/head.html' ?>
-    </head>
+    
+    <?php include 'components/head.html' ?>
+    
 <body data-title="about">
  
     <?php include 'components/header.html' ?>
