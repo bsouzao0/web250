@@ -5,9 +5,8 @@
         <?php include 'components/head.html' ?>
     </head>
 <body data-title="home">
-    <header>  
-        <?php include 'components/header.html' ?>
-    </header>   
+ 
+    <?php include 'components/header.html' ?>
 
     <main>
         <h2>Home</h2>
@@ -19,9 +18,7 @@
         Feel free to explore and see what I've been working on!</p>
     </main>
 
-    <footer>
-        <?php include 'components/footer.html' ?>
-    </footer>
+    <?php include 'components/footer.html' ?>
 
 </body>
 

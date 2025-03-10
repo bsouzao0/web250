@@ -5,9 +5,7 @@
         <?php include 'components/head.html' ?>
     </head>
 <body data-title="template">
-    <header>
-        <?php include 'components/header.html' ?>
-    </header>
+    <?php include 'components/header.html' ?>
 
     <main>
         <h2>Template Page - CHANGE TO PAGE NAME</h2>
@@ -19,9 +17,7 @@
         </p>
     </main>
 
-    <footer>
-        <?php include 'components/footer.html' ?>
-    </footer>
+    <?php include 'components/footer.html' ?>
 </body>
 
 

@@ -5,10 +5,8 @@
         <?php include 'components/head.html' ?>
     </head>
 <body data-title="contract">
-    <header>
-        <?php include 'components/header.html' ?>
-    </header>
-
+    <?php include 'components/header.html' ?>
+    
     <main>
         <h2>Contract</h2>
 
@@ -28,9 +26,7 @@
         <p><i>Signed: Brenda S. Oliveira, 01/19/2025</i></p>
     </main>
 
-    <footer>
-        <?php include 'components/footer.html' ?>
-    </footer>
+    <?php include 'components/footer.html' ?>
 
 </body>
 

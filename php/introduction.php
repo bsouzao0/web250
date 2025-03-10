@@ -5,11 +5,9 @@
         <?php include 'components/head.html' ?>
     </head>
 <body data-title="about">
-
-    <header>  
-        <?php include 'components/header.html' ?>
-    </header> 
-
+ 
+    <?php include 'components/header.html' ?>
+    
     <main>
         <h2>Introduction</h2>
 
@@ -43,9 +41,7 @@
         </ul>
     </main>
 
-    <footer>
-        <?php include 'components/footer.html' ?>
-    </footer>
+    <?php include 'components/footer.html' ?>
 
 </body>
 
