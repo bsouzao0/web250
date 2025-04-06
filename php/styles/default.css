@@ -14,7 +14,8 @@ body {
     align-items: center;
     justify-items: center;
     background-color: #d3effc;
-    font-family: "Unna", serif;
+    font-family: "Poppins", serif;
+    font-size: medium;
 }
 
 header {
@@ -56,7 +57,7 @@ nav ul li a {
     text-decoration: none;
     list-style-type: none;
     color: #ffffff;
-    font-size: larger;
+    font-weight: lighter;
 }
 /* Dropdown */
 .dropdown {
@@ -120,7 +121,7 @@ main ul {
 }
 
 h1 {
-    font-family: "Poppins", serif;
+    font-family: "Noto Sans", serif;
     width: 30%;
 }
 
