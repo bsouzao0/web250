@@ -12,7 +12,7 @@ body {
     align-items: center;
     justify-items: center;
     background-color: #d3effc;
-    font-family: "Andika", serif;
+    font-family: "Unna", serif;
 }
 
 header {
@@ -119,9 +119,7 @@ main ul {
 }
 
 h1 {
-    font-family: "Updock", serif;
-    font-size: 3.5rem;
-    font-weight: 600;
+    font-family: "Noto Sans", serif;
     width: 30%;
 }
 
