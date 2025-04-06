@@ -20,7 +20,7 @@
         not logins or showing up for class. As such, failure to turn in 
         assignments may show as absences.</p>
             
-        <p><i>Signed: Brenda S. Oliveira, 01/19/2025</i></p>
+        <p><em>Signed: Brenda S. Oliveira, 01/19/2025</em></p>
     </main>
 
     <?php include 'components/footer.html' ?>
