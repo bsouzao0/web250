@@ -57,6 +57,15 @@ nav ul li a {
     font-size: larger;
 }
 
+a {
+    text-decoration: none;
+    color: #b33473;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
 main {
     display: grid;
     background-color: white;
@@ -64,10 +73,7 @@ main {
     display: grid;
 }
 
-main a {
-    text-decoration: none;
-    color: #b33473;
-}
+
 
 main p {
     padding: 0 0.5rem;
@@ -106,6 +112,9 @@ footer {
     align-items: center;
     justify-content: center;
     margin: 0.5rem;
+}
+footer a {
+    text-decoration: none;
 }
 
 footer nav ul {
