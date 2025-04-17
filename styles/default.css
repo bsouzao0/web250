@@ -8,14 +8,15 @@ html {
 
 body {
     display: grid;
-    height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
     align-items: center;
     justify-items: center;
     background-color: #d3effc;
     font-family: "Poppins", serif;
     font-size: medium;
+    margin: 20px auto;
+    height: 90vh;
 }
 
 header {
@@ -25,11 +26,13 @@ header {
     align-items: center;
     text-align: center;
     justify-content: space-around;
-    margin: 1rem;
     width: 100%;
 }   
+
 header nav {
     width: 40%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 nav {
@@ -43,14 +46,14 @@ nav {
 nav ul {
     margin: 1rem;
     padding: 1rem;
+    
 }
 
 nav ul li {
     list-style-type: none;
     padding: 0.1rem;
     box-sizing: border-box;
-    border-bottom: white 0.2px solid;
-    
+    border-bottom: white 0.2px solid; 
 }
 
 nav ul li a {
@@ -73,15 +76,19 @@ main {
     display: grid;
     background-color: white;
     text-align: left;
-    display: grid;
+    margin: 10px;
+    width: 100%;
 }
 
 main p {
-    padding: 0 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 main ul {
     list-style-type: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 h1 {
@@ -105,18 +112,19 @@ figcaption {
 
 footer {
     display: grid;
-    text-align: center;
     align-items: center;
-    justify-content: center;
-    margin: 0.5rem;
+    justify-items: center;
+    width: 100%;
 }
+
 footer a {
-    text-decoration: none;
+    text-decoration: none; 
 }
 
 footer nav ul {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 footer nav ul li {
