@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <?php include 'components/head.html' ?>
+<?php include 'components/head.html' ?>
     
 <body data-title="home">
  
