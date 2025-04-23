@@ -31,7 +31,7 @@
                     <li><strong>NET126 – Switching and Routing:</strong>  It is part of my major in Cloud &amp; Virtualization Tech, and also helps me with options for different career paths while I am also considering some Cisco certifications.
                     </li>
                     <li><strong>WEB215 – Advanced Markup &amp; Scripting</strong> I would like to become a Web Developer, so this class will help me to accomplish my goals.</li>
-                    <li><strong><a href="contract.html"></a>WEB250 – Database Driven Websites:</a></strong> It is part of my Web Developer path.</li>
+                    <li><strong><a href="contract.php"></a>WEB250 – Database Driven Websites:</a></strong> It is part of my Web Developer path.</li>
                     <li><strong>CTS118 – IS Professional Communication:</strong> As a non-native English speaker, I think this class is essential to help me build vocabulary and learn to communicate in the corporate world.
                     </li>
                 </ul>
