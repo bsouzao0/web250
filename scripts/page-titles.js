@@ -13,5 +13,5 @@ var pageConfig = {
         brenda: "Brenda Oliveira",
         template: "Template Page - CHANGE FOR THIS PAGE"
     },
-    defaultTitle: "Default Title"
+    defaultTitle: "Brenda Oliveira's Blue Orchid « WEB250 »"
 };
