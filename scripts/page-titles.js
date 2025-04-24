@@ -13,5 +13,14 @@ var pageConfig = {
         brenda: "Brenda Oliveira",
         template: "Template Page - CHANGE FOR THIS PAGE"
     },
-    defaultTitle: "Brenda Oliveira's Blue Orchid « WEB250 »"
+    defaultTitle: "Default Title"
 };
+
+$.get('components/head.html', function(data) {
+    $('head').append(data);
+
+    // Title
+    var pageKey = $('body').data('title');
+    var pageTitle = pageConfig.pageTitles[pageKey] || pageConfig.defaultTitle;
+    document.title = pageConfig.titlePrefix + pageTitle;
+});
