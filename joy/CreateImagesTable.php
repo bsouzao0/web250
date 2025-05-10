@@ -7,14 +7,14 @@
 include 'db.php';
 
    if (!$mysqli) { 
-      die('Could not connect: ' . mysqli_error($mysqli));
+      die('Could not connect: ' . $mysqli->connect_error);
   } 
-  echo 'Connected successfully to mySQL. <BR>'; 
+  echo 'Connected successfully to MySQL. <BR>'; 
 
 
 //select a database to work with
-$mysqli->select_db("Cars");
-   Echo ("Selected the Cars database <br>");
+$mysqli->select_db("if0_38812485_cars");
+echo ("Selected the Cars database <br>");
 
 $query = " CREATE TABLE IMAGES (ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT, VIN varchar(17), ImageFile varchar(250))";
 //echo "<p>***********</p>";
@@ -22,11 +22,11 @@ $query = " CREATE TABLE IMAGES (ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT, VIN 
 //echo "<p>***********</p>";
 if ($mysqli->query($query) === TRUE) 
 {
-    echo "Database table 'Images' created</P>";
+    echo "Database table 'Images' created</br>";
 }
 else
 {
-    echo "<p>Error: " . mysqli_error($mysqli);
+    echo "<p>Error: " . $mysqli->error; "</p>";
 }
  echo "<br><br><a href='index.html'>Home</a>";
 $mysqli->close();

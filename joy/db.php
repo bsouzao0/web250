@@ -1,11 +1,11 @@
  <?php
-$mysqli = new mysqli('mySQL', 'root', 'verysecret', 'Cars' );
+$mysqli = new mysqli('sql103.infinityfree.com', 'if0_38812485', 'qqcg1y65rGVM', 'if0_38812485_cars' );
 /* check connection */
-if (mysqli_connect_errno()) {
-    printf("Connect failed: %s\n", mysqli_connect_error());
+if ($mysqli->connect_error) {
+    printf("Connect failed: %s\n" . $mysqli->connect_error);
     exit();
 }
 //select a database to work with
-$mysqli->select_db("Cars");
+$mysqli->select_db("if0_38812485_cars");
  
 ?>
