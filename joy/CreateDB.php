@@ -7,10 +7,10 @@
 $mysqli = new mysqli('sql103.infinityfree.com', 'if0_38812485', 'qqcg1y65rGVM' );
 
 
-   if (!$mysqli) { 
+   if (!$mysqli->connect_error) { 
       die('Could not connect'); 
   } 
-  echo 'Connected successfully to mySQL. <BR>'; 
+  echo 'Connected successfully to mySQL. <br>'; 
   
 
 /* Create table doesn't return a resultset */
