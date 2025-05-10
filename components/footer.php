@@ -4,7 +4,7 @@
             <li><a href="https://github.com/bsouzao0">GitHub</a></li>
             <li><a href="https://bsouzao0.github.io/">GitHub.io</a></li>
             <li><a href="https://bsouzao0.github.io/web215">WEB215.io</a></li>
-            <li><a href="https://bsouzao0.github.io/web250">WEB250.io</a></li>
+            <li><a href="http://boweb-250.free.nf">WEB250</a></li>
             <li><a href="https://www.codecademy.com/profiles/BSSOliveira">Codecademy</a></li>
             <li><a href="https://www.freecodecamp.org/bsouzao">freeCodeCamp</a></li>
             <li><a href="https://jsfiddle.net/u/bsouzao/fiddles/">JSFiddle</a></li>
