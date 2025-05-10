@@ -1,3 +1,7 @@
+<?php 
+include 'scripts/db.php';
+include 'dbConnect.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,13 +16,26 @@
     <script src="https://lint.page/kit/880bd5.js" crossorigin="anonymous"></script>
     <title>Blue Orchid's Used Cars</title>
 </head>
-    
 <body>
     <?php include 'components/header.php'; ?>
     <main>
-    
+        <h2>Add a New Car</h2>
+        <form action="submitCar.php" method="post" class="car-form">
+            <label for="VIN">VIN:</label>
+            <input id="VIN" name="VIN" type="text" required /><br /><br />
+
+            <label for="Make">Make:</label>
+            <input id="Make" name="Make" type="text" required /><br /><br />
+
+            <label for="Model">Model:</label>
+            <input id="Model" name="Model" type="text" required /><br /><br />
+
+            <label for="Asking_Price">Price:</label>
+            <input id="Asking_Price" name="Asking_Price" type="number" step="0.01" required /><br /><br />
+
+            <input type="submit" value="Add Car" />
+        </form>
     </main>
-    
     <?php include 'components/footer.php'; ?>
 </body>
 </html>

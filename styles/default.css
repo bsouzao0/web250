@@ -24,9 +24,8 @@ header {
     background-color: white;
     color: #5679a7;
     align-items: center;
-    justify-content: space-between; /* Adjusted for better spacing */
+    justify-content: space-between; 
     width: 100%;
-    padding: 1rem;
 }
 
 header nav {

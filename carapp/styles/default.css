@@ -16,7 +16,7 @@ body {
     font-family: "Poppins", sans-serif;
     font-size: medium;
     margin: 20px auto;
-    height: auto;
+    height: 90vh;
 }
 
 header {
@@ -24,46 +24,114 @@ header {
     background-color: white;
     color: #5679a7;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
+}
+
+header nav {
+    width: 40%;
+}
+
+nav {
+    background-color: #b33473;
+    margin: 0;
+    padding: 0;
+    font-weight: 800;
+    width: 100%;
+    
+}
+
+nav ul {
+    margin: 1rem;
     padding: 1rem;
+}
+
+nav ul li {
+    list-style-type: none;
+    padding: 0.1rem;
+    box-sizing: border-box;
+    border-bottom: white 0.2px solid;
+    text-align: center;
+       
+}
+
+nav ul li a {
+    text-decoration: none;
+    list-style-type: none;
+    color: #ffffff;
+    font-weight: lighter;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: block;
+}
+
+.dropbtn {
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: white;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #b33473;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #d3effc;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #b33473;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+main {
+    display: grid;
+    background-color: white;
+    text-align: left;
+    margin: 10px;
+    width: 100%;
+    height: auto;
+   }
+
+main p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+main ul {
+    list-style-type: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 h1 {
     font-family: "Noto Sans", serif;
-    font-size: 2rem;
-    margin: 0;
+    width: 45%;
 }
 
 h2 {
     text-align: center;
     color: #5679a7;
-}
-
-h3.feedback {
-    color: green;
-    text-align: center;
-    padding: 0.5rem;
-}
-
-nav {
-    background-color: #b33473;
-    font-weight: 800;
-    width: 100%;
-}
-
-nav ul {
-    display: flex;
-    gap: 1rem;
-    padding: 1rem;
-    list-style: none;
-    justify-content: center;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: lighter;
 }
 
 .car-list {
@@ -77,13 +145,13 @@ nav ul li a {
 .car {
     background-color: #ffffff;
     border: 1px solid #ccc;
-    padding: 1rem;
-    width: 300px;
     position: relative;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    padding: 1rem;
 }
 
-.car h4 {
+h4 {
     margin: 0 0 0.5rem;
     color: #333;
 }
@@ -93,32 +161,13 @@ nav ul li a {
     color: #555;
 }
 
-.delete-btn {
-    color: red;
-    text-decoration: none;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-weight: bold;
-}
-
-.edit-btn {
-    color: #5679a7;
-    text-decoration: none;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    font-weight: bold;
-}
-
 .car-form {
     background-color: #ffffff;
-    padding: 1rem;
-    margin-top: 2rem;
+    margin: 0 auto 1rem;
     border: 1px solid #ccc;
-    width: 100%;
     max-width: 600px;
     box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    padding: 1rem;
 }
 
 .car-form form {
@@ -149,30 +198,70 @@ footer {
     justify-items: center;
     width: 100%;
     background-color: #fdfdfd;
-    padding: 1rem;
+   
 }
 
-footer p {
-    margin: 0;
-    color: #888;
+footer a {
+    text-decoration: none;
+}
+
+footer div {
+    padding: 0.4rem;
+}
+
+footer nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+}
+
+footer nav ul li {
+    padding: 0 1rem;
 }
 
 @media only screen and (max-width: 550px) {
+    
     header {
-        flex-direction: column;
-        align-items: center;
+        text-align: center;
+        grid-template-columns: 1fr;
+        background-color: white;
+        margin: 1rem;
+        width: 100%;
     }
 
     nav ul {
+        display: flex;
         flex-direction: column;
-        padding: 0;
+    }
+
+    nav ul li {
+        list-style-type: none;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        list-style-type: none;
+        padding: 0.5rem;
+        font-size: 1.1rem; 
     }
 
     .car {
-        width: 90%;
+        width: 100%;
     }
 
     .car-form {
-        width: 90%;
+        width: 100%;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    footer nav ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
     }
 }
