@@ -3,7 +3,7 @@
 html {
     margin: 0 auto;
     max-width: 1100px;
-    width: 90%
+    width: 90%;
 }
 
 body {
@@ -13,21 +13,21 @@ body {
     align-items: center;
     justify-items: center;
     background-color: #d3effc;
-    font-family: "Poppins", serif;
+    font-family: "Poppins", sans-serif;
     font-size: medium;
     margin: 20px auto;
     height: 90vh;
 }
 
 header {
-        display: flex;
+    display: flex;
     background-color: white;
     color: #5679a7;
     align-items: center;
-    text-align: center;
-    justify-content: space-around;
+    justify-content: space-between; /* Adjusted for better spacing */
     width: 100%;
-}   
+    padding: 1rem;
+}
 
 header nav {
     width: 40%;
@@ -47,10 +47,10 @@ nav ul {
 }
 
 nav ul li {
-     list-style-type: none;
+    list-style-type: none;
     padding: 0.1rem;
     box-sizing: border-box;
-    border-bottom: white 0.2px solid; 
+    border-bottom: white 0.2px solid;
 }
 
 nav ul li a {
@@ -65,39 +65,38 @@ nav ul li a {
     position: relative;
     display: block;
 }
- 
+
 .dropbtn {
     border: none;
     cursor: pointer;
 }
 
 .dropdown-content {
-display: none; 
-position: relative;
-background-color: white;
-min-width: 160px;
-z-index: 1;
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    z-index: 1;
 }
 
 .dropdown-content a {
-color: #b33473;
-text-decoration: none;
-display: block;
+    color: #b33473;
+    text-decoration: none;
+    display: block;
 }
 
 .dropdown-content a:hover {
-background-color: #d3effc; 
+    background-color: #d3effc;
 }
 
 .dropdown:hover .dropdown-content {
-display: block; 
+    display: block;
 }
 
 a {
     text-decoration: none;
     color: #b33473;
 }
-
 
 a:visited {
     text-decoration: none;
@@ -137,20 +136,21 @@ figure {
 }
 
 figcaption {
-	font-style: italic;
-	padding: 0.1rem;
- }
+    font-style: italic;
+    padding: 0.1rem;
+}
 
 footer {
     display: grid;
     align-items: center;
     justify-items: center;
     width: 100%;
-    background-color: #fdfdfd
+    background-color: #fdfdfd;
+    padding: 1rem;
 }
 
 footer a {
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 footer div {
@@ -168,16 +168,15 @@ footer nav ul li {
     padding: 0 1rem;
 }
 
-
 @media only screen and (max-width: 550px) {
-
     header {
         text-align: center;
         grid-template-columns: 1fr;
         background-color: white;
         margin: 1rem;
+        width: 100%;
     }
-    
+
     nav ul {
         display: flex;
         flex-direction: column;
@@ -190,8 +189,10 @@ footer nav ul li {
     nav ul li a {
         text-decoration: none;
         list-style-type: none;
+        padding: 0.5rem;
+        font-size: 1.1rem; /* Increase font size on small screens */
     }
-    
+
     figure {
         display: flex;
         flex-direction: column;
@@ -200,10 +201,11 @@ footer nav ul li {
         text-align: center;
         justify-items: center;
     }
-    
+
     footer {
         width: 100%;
     }
+
     footer nav ul {
         display: flex;
         flex-direction: column;
