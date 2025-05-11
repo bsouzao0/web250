@@ -2,7 +2,7 @@
     <h1>Brenda Oliveira's Blue Orchid &laquo; WEB250</h1>
     <nav>
         <ul>
-            <li><a href="index.php?page=home">Home</a></li>
+            <li><a href="./?page=home">Home</a></li>
             <li><a href="index.php?page=introduction">Introduction</a></li>
             <li><a href="index.php?page=contract">Contract</a></li>
             <li class="dropdown">
