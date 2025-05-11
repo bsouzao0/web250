@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <main>
     <section class="car-form">
-        <h4 class="<?= $message_type ?>!"><?= $message ?></h4>
+        <h4 class="<?= $message_type ?>"><?= $message ?>!</h4>
         <p><a href="./">Return to Inventory</a></p>
     </section>
 </main>
