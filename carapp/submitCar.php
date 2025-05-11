@@ -1,13 +1,41 @@
 <?php 
-include 'scripts/db.php';
+include 'db.php';
 
-$VIN = trim($_POST['VIN']);
-$Make = trim($_POST['Make']);
-$Model = trim($_POST['Model']);
-$Price = floatval($_POST['Asking_Price']); 
+function addCar($VIN, $Make, $Model, $Asking_Price, $mysqli) {
+    $query = "INSERT INTO inventory (VIN, Make, Model, ASKING_PRICE) VALUES (?, ?, ?, ?)";
+    $stmt = $mysqli->prepare($query);
+    $stmt->bind_param("sssd", $VIN, $Make, $Model, $Asking_Price);
 
-$query = "INSERT INTO inventory (VIN, Make, Model, ASKING_PRICE)
-          VALUES ('$VIN', '$Make', '$Model', $Price)";
+    if ($stmt->execute()) {
+        return ["message" => "You have successfully entered <strong>$Make $Model</strong> into the database.", "type" => "success"];
+    } else {
+        return ["message" => "Error entering $VIN into database: " . $stmt->error, "type" => "error"];
+    }
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  
+    if (isset($_POST['VIN'], $_POST['Make'], $_POST['Model'], $_POST['Asking_Price'])) {
+        $VIN = trim($_POST['VIN']);
+        $Make = trim($_POST['Make']);
+        $Model = trim($_POST['Model']);
+        $Asking_Price = floatval($_POST['Asking_Price']);
+        
+        if (empty($VIN) || empty($Make) || empty($Model) || empty($Asking_Price)) {
+            $message = "Please fill in all fields!";
+            $message_type = "error";
+        } else {
+            $response = addCar($VIN, $Make, $Model, $Asking_Price, $mysqli);
+            $message = $response['message'];
+            $message_type = $response['type'];
+        }
+    } else {
+        $message = "Invalid form submission!";
+        $message_type = "error";
+    }
+    
+    $mysqli->close();
+}
 ?>
 
 <!DOCTYPE html>
@@ -29,27 +57,8 @@ $query = "INSERT INTO inventory (VIN, Make, Model, ASKING_PRICE)
 
 <main>
     <section class="car-form">
-        <?php
-        echo "<p><strong>Query:</strong> $query</p>";
-
-        if ($mysqli->connect_error) {
-            echo "<p style='color:red;'>Connection failed: " . $mysqli->connect_error . "</p>";
-        } else {
-            echo "<p>Connected successfully to MySQL.</p>";
-
-            $mysqli->select_db("Cars");
-            echo "<p>Selected the Cars database.</p>";
-
-            if ($mysqli->query($query)) {
-                echo "<p class='feedback'>You have successfully entered <strong>$Make $Model</strong> into the database.</p>";
-            } else {
-                echo "<p style='color:red;'>Error entering $VIN into database: " . $mysqli->error . "</p>";
-            }
-
-            $mysqli->close();
-        }
-        ?>
-        <p><a href="index.php">Return to Inventory</a></p>
+        <h4 class="<?= $message_type ?>"><?= $message ?></h4>
+        <p><a href="./">Return to Inventory</a></p>
     </section>
 </main>
 

@@ -137,6 +137,7 @@ h2 {
 .car-list {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     gap: 1rem;
     justify-content: center;
     padding: 1rem;
@@ -168,11 +169,6 @@ h4 {
     max-width: 600px;
     box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
     padding: 1rem;
-}
-
-.car-form form {
-    display: grid;
-    gap: 0.5rem;
 }
 
 .car-form input,
@@ -232,9 +228,8 @@ footer nav ul li {
 
     nav ul {
         display: flex;
-        flex-direction: column;
+        flex-direction: colums;
     }
-
     nav ul li {
         list-style-type: none;
     }
@@ -247,11 +242,11 @@ footer nav ul li {
     }
 
     .car {
-        width: 100%;
+        width: 90%;
     }
 
     .car-form {
-        width: 100%;
+        width: 90%;
     }
 
     footer {
