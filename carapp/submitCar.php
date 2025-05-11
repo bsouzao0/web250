@@ -7,7 +7,7 @@ function addCar($VIN, $Make, $Model, $Asking_Price, $mysqli) {
     $stmt->bind_param("sssd", $VIN, $Make, $Model, $Asking_Price);
 
     if ($stmt->execute()) {
-        return ["message" => "You have successfully entered <strong>$Make $Model</strong> into the database.", "type" => "success"];
+        return ["message" => "You have successfully entered <strong>$Make $Model</strong> into the database", "type" => "success"];
     } else {
         return ["message" => "Error entering $VIN into database: " . $stmt->error, "type" => "error"];
     }
@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <main>
     <section class="car-form">
-        <h4 class="<?= $message_type ?>"><?= $message ?></h4>
+        <h4 class="<?= $message_type ?>!"><?= $message ?></h4>
         <p><a href="./">Return to Inventory</a></p>
     </section>
 </main>
