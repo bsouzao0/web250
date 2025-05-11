@@ -24,7 +24,7 @@ header {
     background-color: white;
     color: #5679a7;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: center; 
     width: 100%;
 }
 
@@ -36,8 +36,10 @@ nav {
     background-color: #b33473;
     margin: 0;
     padding: 0;
-    font-weight: 800;
     width: 100%;
+    font-weight: bold;
+    text-align: center;
+    
 }
 
 nav ul {
@@ -50,47 +52,52 @@ nav ul li {
     padding: 0.1rem;
     box-sizing: border-box;
     border-bottom: white 0.2px solid;
+    position: relative; 
 }
-
-nav ul li a {
+nav ul li > a {
+    color: white;
     text-decoration: none;
-    list-style-type: none;
-    color: #ffffff;
-    font-weight: lighter;
-}
-
-/* Dropdown */
-.dropdown {
-    position: relative;
-    display: block;
 }
 
 .dropbtn {
-    border: none;
-    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    color: white;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
+    top: 100%;
+    left: 0;
     background-color: white;
-    min-width: 160px;
-    z-index: 1;
+    min-width: 180px;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-content li {
+    list-style-type: none;
+    border-bottom: 1px solid #eee;
 }
 
 .dropdown-content a {
+    display: block;
+    padding: 10px 15px;
     color: #b33473;
     text-decoration: none;
-    display: block;
 }
 
 .dropdown-content a:hover {
     background-color: #d3effc;
+  
 }
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+
 
 a {
     text-decoration: none;
@@ -122,7 +129,7 @@ main ul {
 
 h1 {
     font-family: "Noto Sans", serif;
-    width: 30%;
+    width: 45%;
 }
 
 h2 {

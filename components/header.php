@@ -3,18 +3,23 @@
     <nav>
         <ul>
             <li><a href="./?page=home">Home</a></li>
-            <li><a href="index.php?page=introduction">Introduction</a></li>
-            <li><a href="index.php?page=contract">Contract</a></li>
+            <li><a href="./?page=introduction">Introduction</a></li>
+            <li><a href="./?page=contract">Contract</a></li>
             <li class="dropdown">
-                <a href="#" class="dropbtn">Multipages</a>
+                <span class="dropbtn">Websites</span>
                 <ul class="dropdown-content">
                     <li><a href="multipage_sites/superduper_php/">Superduper_PHP</a></li>
                     <li><a href="multipage_sites/superduper_static/">Superduper_static</a></li>
+                    <li><a href="joy/">Joy of PHP</a></li>
+                    <li><a href="joy/samsusedcars.html">Sam's Used Car</a></li>
                 </ul>
             </li>
-            <li><a href="joy/">Joy of PHP</a></li>
-            <li><a href="joy/samsusedcars.html">Sam's Used Car</a></li>
-            <li><a href="carapp/index.php">CarApp</a></li>
+            <li class="dropdown">
+                <span class="dropbtn">CarApps</span>
+                <ul class="dropdown-content">
+                    <li><a href="carapp/index.php">CarApp</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 </header>
