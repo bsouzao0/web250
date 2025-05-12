@@ -54,7 +54,7 @@ $cars = getCars($mysqli);
                 <div>
                     <a href="editCars.php?vin=<?= urlencode($car['VIN']) ?>" class="btn btn-sm btn-primary">
                     <i class="bi bi-pencil-square"></i> Edit</a>
-                    <a href="index.php?delete=<?= urlencode($car['VIN']) ?>" class="btn btn-danger btn-sm" title="Delete">
+                    <a href="./?delete=<?= urlencode($car['VIN']) ?>" class="btn btn-danger btn-sm" title="Delete">
                     <i class="bi bi-trash"></i> Delete</a>
                 </div>
             <?php endforeach; ?>
