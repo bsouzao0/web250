@@ -35,7 +35,7 @@ $totalPages = ceil($totalCars / $limit);
 <?php include 'components/header.php'; ?>
 
 <div class="login-btn" id="loginBtn">Login</div>
-<div class="login-btn" id="signupBtn" style="right: 120px;">Sign Up</div>
+<!-- <div class="login-btn" id="signupBtn" style="right: 120px;">Sign Up</div> ! -->
 
 <?php if (isset($_SESSION['user'])): ?>
     <p class="welcome-msg">Welcome, <?= htmlspecialchars($_SESSION['first_name']) ?> <?= htmlspecialchars($_SESSION['last_name']) ?>! 

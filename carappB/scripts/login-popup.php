@@ -14,8 +14,9 @@
         <input type="submit" value="Login">
         <p id="loginError" style="color: red;"></p>
     </form>
-</div>
+</div> 
 
+<!-- 
 <div class="login-popup" id="signupPopup" style="display:none;">
     <div class="close-btn" id="closeSignupBtn">X</div>
     <h3>Sign Up</h3>
@@ -35,7 +36,7 @@
         <input type="submit" value="Create Account">
         <p id="signupError" style="color: red;"></p>
     </form>
-</div>
+</div> !-->
 
 <script>
 $(document).ready(function () {
@@ -45,13 +46,13 @@ $(document).ready(function () {
         $('#loginPopup').show();
         $('#overlay').show();
     });
-
+/*
     $('#signupBtn').click(function () {
         $('#loginPopup').hide(); 
         $('#signupPopup').show();
         $('#overlay').show();
     });
-
+*/
     $('#closeBtn, #closeSignupBtn, #overlay').click(function () {
         $('#loginPopup').hide();
         $('#signupPopup').hide();
@@ -72,7 +73,7 @@ $(document).ready(function () {
         }, 'json');
     });
 
-    $('#signupForm').on('submit', function (e) {
+   /* $('#signupForm').on('submit', function (e) {
         e.preventDefault();
 
         $('#signupError').text("");
@@ -85,7 +86,7 @@ $(document).ready(function () {
                 $('#signupError').css('color', 'red').text(response.message);
             }
         }, 'json');
-    });
+    });*/
 });
 
 </script>
