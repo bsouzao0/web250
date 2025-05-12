@@ -2,6 +2,16 @@
 include 'db.php';
 
 function addCar($VIN, $Make, $Model, $Asking_Price, $mysqli) {
+ 
+    $check = $mysqli->prepare("SELECT VIN FROM inventory WHERE VIN = ?");
+    $check->bind_param("s", $VIN);
+    $check->execute();
+    $result = $check->get_result();
+
+    if ($result->num_rows > 0) {
+        return ["message" => "A car with VIN <strong>$VIN</strong> already exists in the database.", "type" => "error"];
+    }
+
     $query = "INSERT INTO inventory (VIN, Make, Model, ASKING_PRICE) VALUES (?, ?, ?, ?)";
     $stmt = $mysqli->prepare($query);
     $stmt->bind_param("sssd", $VIN, $Make, $Model, $Asking_Price);
@@ -49,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://lint.page/kit/880bd5.js" crossorigin="anonymous" ></script>
+    <script src="https://lint.page/kit/880bd5.js" crossorigin="anonymous"></script>
     <title>Blue Orchid's Used Cars</title>
 </head>
 

@@ -17,7 +17,8 @@
             <li class="dropdown">
                 <span class="dropbtn">CarApps</span>
                 <ul class="dropdown-content">
-                    <li><a href="carapp/index.php">CarApp</a></li>
+                    <li><a href="carapp/./">CarAppA</a></li>
+                    <li><a href="carappB/./">CarAppB</a></li>
                 </ul>
             </li>
         </ul>
