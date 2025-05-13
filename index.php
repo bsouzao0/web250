@@ -16,7 +16,8 @@
             $pageTitle = [
                 'home' => 'Home',
                 'introduction' => 'Introduction',
-                'contract' => 'Contract'
+                'contract' => 'Contract',
+                'fizzbuzz' => 'FizzBuzz',
             ];
 
             $defaultTitle = "Brenda Oliveira's Blue Orchid « WEB250 »";
@@ -34,7 +35,7 @@
     <?php include 'components/header.php'; ?>
     <main>
         <?php
-        $pageComponents = ['home', 'introduction', 'contract'];
+        $pageComponents = ['home', 'introduction', 'contract', 'fizzbuzz'];
         $page = $_GET['page'] ?? 'home';
         if (in_array($page, $pageComponents)) {
             include "contents/{$page}.php";

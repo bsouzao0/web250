@@ -132,7 +132,7 @@ h1 {
     width: 45%;
 }
 
-h2 {
+h2, h3 {
     text-align: center;
     color: #5679a7;
 }
@@ -151,7 +151,7 @@ footer {
     align-items: center;
     justify-items: center;
     width: 100%;
-    background-color: #fdfdfd;
+    background-color: white;
 }
 
 footer a {
@@ -171,6 +171,32 @@ footer nav ul {
 
 footer nav ul li {
     padding: 0 1rem;
+}
+form {
+    margin: 0 2rem;
+}
+#fizzbuzz-form label {
+  display: block;
+  font-weight: bold;
+  color: #5679a7;
+}
+
+#fizzbuzz-form input {
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: "Poppins", sans-serif;
+}
+
+button[type="submit"],
+input[type="submit"], button[type="button"] {
+    background-color: #5679a7; 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
 }
 
 @media only screen and (max-width: 550px) {

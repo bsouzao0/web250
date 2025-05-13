@@ -5,6 +5,7 @@
             <li><a href="./?page=home">Home</a></li>
             <li><a href="./?page=introduction">Introduction</a></li>
             <li><a href="./?page=contract">Contract</a></li>
+            <li><a href="./?page=fizzbuzz">FizzBuzz</a></li>
             <li class="dropdown">
                 <span class="dropbtn">Websites</span>
                 <ul class="dropdown-content">
