@@ -18,6 +18,7 @@
                 'introduction' => 'Introduction',
                 'contract' => 'Contract',
                 'fizzbuzz' => 'FizzBuzz',
+                'introductionForm' => 'Introduction Form',
             ];
 
             $defaultTitle = "Brenda Oliveira's Blue Orchid « WEB250 »";
@@ -28,14 +29,13 @@
             }
             ?>
     </title>
-    
 </head>
     
 <body>
     <?php include 'components/header.php'; ?>
     <main>
         <?php
-        $pageComponents = ['home', 'introduction', 'contract', 'fizzbuzz'];
+        $pageComponents = ['home', 'introduction', 'contract', 'fizzbuzz', 'introductionForm'];
         $page = $_GET['page'] ?? 'home';
         if (in_array($page, $pageComponents)) {
             include "contents/{$page}.php";
