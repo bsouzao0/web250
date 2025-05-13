@@ -33,12 +33,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $courses = $_POST['courses'] ?? $courses;
 
     $showIntro = ($_POST['mode'] ?? '') === 'intro';
+
+if (isset($_FILES['uploadPicture']) && $_FILES['uploadPicture']['error'] === UPLOAD_ERR_OK) {
+    $uploadDir = 'uploads/';
+    $tmpPath = $_FILES['uploadPicture']['tmp_name'];
+    $fileName = $_FILES['uploadPicture']['name'];
+    $fileType = mime_content_type($tmpPath);
+    $allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+
+    if (in_array($fileType, $allowedTypes)) {
+        $ext = pathinfo($fileName, PATHINFO_EXTENSION);
+        $safeName = uniqid('img_', true) . '.' . $ext;
+        $destPath = $uploadDir . $safeName;
+
+        if (!file_exists($uploadDir)) {
+            mkdir($uploadDir, 0755, true);
+        }
+
+        if (move_uploaded_file($tmpPath, $destPath)) {
+            $profilePicture = $destPath;
+        } else {
+            $uploadError = "Failed to save uploaded file.";
+        }
+    } else {
+        $uploadError = "Invalid image type.";
+    }
+}
+
+
 }
 ?>
 
 
 <?php if (!$showIntro): ?>
-<form method="POST">
+<form method="POST" enctype="multipart/form-data">
   <div class="form-group">
     <label for="fullName">Full Name:</label>
     <input type="text" id="fullName" name="fullName" value="<?= htmlspecialchars($fullName) ?>">
@@ -47,12 +75,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <div class="form-group">
     <label for="profilePicture">Profile Picture URL:</label>
     <input type="text" id="profilePicture" name="profilePicture" value="<?= htmlspecialchars($profilePicture) ?>">
-  </div>
 
-  <div class="form-group">
-    <label for="caption">Image Caption:</label>
-    <input type="text" id="caption" name="caption" value="<?= htmlspecialchars($caption) ?>">
+    <label for="uploadPicture">Or Upload Picture:</label>
+    <input type="file" id="uploadPicture" name="uploadPicture" accept="image/*">
   </div>
+    <?php if (!empty($uploadError)): ?>
+        <p class="error" style="color: red;"><?= htmlspecialchars($uploadError) ?></p>
+    <?php endif; ?>
 
   <div class="form-group">
     <label for="personalBackground">Personal Background:</label>
@@ -105,9 +134,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <h2>Introduction</h2>
 
 <figure>
-  <img src="<?= htmlspecialchars($profilePicture) ?>" alt="Profile Picture">
+  <img src="<?= htmlspecialchars($profilePicture) ?>" alt="Profile Picture" style="max-width: 500px; max-height: 500px; object-fit: contain;">
   <figcaption><?= htmlspecialchars($caption) ?></figcaption>
 </figure>
+
 
 <ul>
   <li><strong>Personal background:</strong> <?= htmlspecialchars($personalBackground) ?></li>
