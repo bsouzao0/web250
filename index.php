@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +21,8 @@
                 'fizzbuzz' => 'FizzBuzz',
                 'introductionForm' => 'Introduction Form',
                 'budget' => 'BudgetApp',
-                'login' => 'Login'
+                'login' => 'Login',
+                'logout' => "Logout"
             ];
 
             $defaultTitle = "Brenda Oliveira's Blue Orchid « WEB250 »";
@@ -37,8 +39,13 @@
     <?php include 'components/header.php'; ?>
     <main>
         <?php
-        $pageComponents = ['home', 'introduction', 'contract', 'fizzbuzz', 'introductionForm', 'budget', 'login'];
+        $pageComponents = ['home', 'introduction', 'contract', 'fizzbuzz', 'introductionForm', 'budget', 'login','logout'];
         $page = $_GET['page'] ?? 'home';
+        $protectedPages = ['budget'];
+
+        if (in_array($page, $protectedPages) && !isset($_SESSION['user'])) {
+            $page = 'login';
+        }
         if (in_array($page, $pageComponents)) {
             include "contents/{$page}.php";
         } else {

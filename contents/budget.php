@@ -1,15 +1,11 @@
 <?php
-
-session_start();
+require_once 'budget/connect.php'; 
+$db = getDB();  
 
 if (!isset($_SESSION['user'])) {
-    header("Location: login.php");
-    exit();
+    header("Location: index.php?page=login");
+    exit(); 
 }
-?>
-<?php
-require_once 'budget/connect.php'; 
-$db = getDB();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $item = $_POST['item'];
@@ -26,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->execute([$item, $amount, $expense_date, $note]);
     }
 
-    header("Location: index.php");
+    header("Location: index.php?page=budget"); 
     exit();
 }
 
@@ -35,21 +31,22 @@ if (isset($_GET['delete'])) {
     $stmt = $db->prepare("DELETE FROM expenses WHERE id = ?");
     $stmt->execute([$id]);
 
-    header("Location: index.php");
+    header("Location: index.php?page=budget");
     exit();
 }
 
 $result = $db->query("SELECT * FROM expenses ORDER BY expense_date DESC, id DESC");
-$total = $db->query("SELECT SUM(amount) FROM expenses")->fetch_row()[0] ?? 0;
+$total = $db->query("SELECT SUM(amount) FROM expenses")->fetchColumn() ?? 0;
 ?>
+
 <h2>Daily Budget Tracker</h2>
+<a href="?page=logout" class="logout-btn">Logout</a>
 <p><button id="openPopupBtn">Add New Expense</button></p>
 <h3>Total Spent: $<?= number_format($total, 2) ?></h3>
 
 <div id="expensePopup" class="popup">
     <div class="popup-content">
-        <span id="closePopupBtn" class="close-btn">×</span>
-
+        
         <?php
         $id = $_GET['edit'] ?? null;
         $item = '';
@@ -69,7 +66,7 @@ $total = $db->query("SELECT SUM(amount) FROM expenses")->fetch_row()[0] ?? 0;
         ?>
 
         <h3><?= $id ? 'Edit Expense' : 'Add New Expense' ?></h3>
-        <form method="POST" action="index.php">
+        <form method="POST" action="index.php?page=budget">
             <input type="hidden" name="id" value="<?= $id ?? '' ?>">
             <input type="text" name="item" value="<?= htmlspecialchars($item) ?>" placeholder="What did you buy?" required><br>
             <input type="number" name="amount" value="<?= htmlspecialchars($amount) ?>" step="0.01" placeholder="Amount" required><br>
@@ -82,18 +79,19 @@ $total = $db->query("SELECT SUM(amount) FROM expenses")->fetch_row()[0] ?? 0;
 
 <table>
     <tr><th>Date</th><th>Item</th><th>Amount</th><th>Note</th><th>Actions</th></tr>
-    <?php while ($row = $result->fetch_assoc()): ?>
+    <?php while ($row = $result->fetch(PDO::FETCH_ASSOC)): ?>  
     <tr>
         <td><?= htmlspecialchars($row['expense_date']) ?></td>
         <td><?= htmlspecialchars($row['item']) ?></td>
         <td>$<?= number_format($row['amount'], 2) ?></td>
         <td><?= htmlspecialchars($row['note']) ?></td>
         <td>
-            <a href="index.php?edit=<?= $row['id'] ?>">Edit</a>
-            <a href="index.php?delete=<?= $row['id'] ?>" onclick="return confirm('Delete this expense?')">Delete</a>
+            <a href="index.php?page=budget&edit=<?= $row['id'] ?>">Edit</a>
+            <a href="index.php?page=budget&delete=<?= $row['id'] ?>" onclick="return confirm('Delete this expense?')">Delete</a>
         </td>
     </tr>
     <?php endwhile; ?>
+
 </table>
 
 <script>
@@ -107,7 +105,7 @@ $total = $db->query("SELECT SUM(amount) FROM expenses")->fetch_row()[0] ?? 0;
     });
 
     window.addEventListener("click", function(event) {
-        if (event.target == document.getElementById("expensePopup")) {
+        if (event.target === document.getElementById("expensePopup")) {
             document.getElementById("expensePopup").style.display = "none";
         }
     });
