@@ -7,6 +7,7 @@
             <li><a href="./?page=contract">Contract</a></li>
             <li><a href="./?page=fizzbuzz">FizzBuzz</a></li>
             <li><a href="./?page=introductionForm">Introduction Form</a></li>
+            <li><a href="./?page=budget">BudgetApp</a></li>
             <li class="dropdown">
                 <span class="dropbtn">Websites</span>
                 <ul class="dropdown-content">

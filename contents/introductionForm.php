@@ -1,6 +1,6 @@
 <?php
 
-$fullName = 'Brenda Silva';
+$fullName = 'Brenda Oliveira';
 $profilePicture = 'images/brendas.png';
 $caption = 'Coffee time to survive this life';
 $personalBackground = 'Born and raised in the north of Brazil, I moved to the US in 2020.';
@@ -64,8 +64,8 @@ if (isset($_FILES['uploadPicture']) && $_FILES['uploadPicture']['error'] === UPL
 }
 ?>
 
-
 <?php if (!$showIntro): ?>
+<h2>Introduction Form</h2>
 <form method="POST" enctype="multipart/form-data">
   <div class="form-group">
     <label for="fullName">Full Name:</label>
